@@ -1,0 +1,350 @@
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin:0px;
+            padding:0px;
+            
+           
+        }
+        header{
+            border-bottom: 1px solid #e6e6e6;
+            
+        }    
+        .navbar{
+           
+            margin:auto;  
+            align-items:center;
+            max-width: 940px;
+            height:50px;
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr;
+           
+        }
+        
+        img{
+            width:100px;
+            
+
+        } 
+        #logo{
+            
+            display:flex;
+            justify-content: left;
+        }
+        #search-bar{
+            
+            display:flex;
+            justify-content: center; 
+            
+        }
+        #icon-menu{           
+            display:flex;
+            justify-content:right;
+            
+            
+        }
+        .icon{
+            width:26px;
+            margin-right:17px;
+           
+           
+        }
+        input{
+            display:flex;
+            text-align: center;         
+            height:25px;
+            width:220px;
+            background-color: #fafafa;
+            border:1px solid #dbdbdb;
+            border-radius:2px;
+        }
+        main{
+            /* margin:auto;   */
+            background-color:  #fafafa;
+            
+            
+        }
+        .propic{
+            border-radius: 65px;
+            width:130px;
+            height: 130px;
+            border:1px solid #8e8e8e;
+            
+            
+        }
+        
+        h1{
+            
+            font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+            font-weight: 300;
+            margin-right: 50px;
+            font-size: 28px;
+        }
+        #b1{
+            display: flex;
+            align-items: center;
+            height: 30px;
+            padding: 7px 25px;
+            margin-right: 5px;
+            border:none;
+            background-color: #0095f6;
+            color:white;
+            border-radius: 2px;
+                      
+        }
+        #b2{
+            display: flex;
+            align-items: center;
+            height: 30px;
+            padding: 7px 15px;
+            margin-right: 5px;
+            border:none;
+            background-color: rgb(65, 156, 231);
+            color:white;
+            border-radius: 2px;
+        }
+        button{
+            display: flex;
+            align-items: center;
+            height: 30px;
+            padding: 5px 20px;
+            margin-right: 5px;
+            border:none;
+            background-color: #fafafa;
+        }
+        text{
+        
+            margin-right: 20px;
+        }
+        .profile-header-section{
+            margin:0 auto;          
+            max-width: 940px;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            align-items: center;
+                      
+        }
+        .highlights{
+            margin:0 auto;          
+            max-width: 940px;
+            
+        }
+        .proimg{
+            
+            grid-row: 1/6;
+            text-align: center;
+                     
+        }
+        .proinfo{       
+            
+            max-height:50px;
+            margin-top: 30px;
+           
+                          
+        }
+        .count{
+            
+            height:40px;                   
+        }
+    
+        a{
+            text-decoration: none;
+            color:#00376b;
+        }
+        h3,h2,p,figcaption{
+            font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+        }
+        .stories-section{
+            
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            height: 150px;
+            border-bottom: 1px solid #e6e6e6;
+            
+            
+        }
+        .highlights:hover{
+            cursor: pointer;
+        }
+        .highimgs{
+            width:70px;
+            border-radius: 50px;
+            margin-left: 50px;
+            border: 2px solid #8e8e8e;
+            
+            
+        }
+        figcaption{
+            margin-top: 10px;
+            text-align: center;
+            font-weight: 400;
+            text-transform: uppercase;
+            margin-left: 50px;
+            width:70px;
+            font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+            color: #262626;
+            
+        }
+        .flex-col{
+            display: grid;
+            margin:auto;
+            max-width: 940px;
+            grid-template-columns: 1fr 1fr 1fr;
+            justify-content: center;
+            grid-gap:20px;
+        }
+        .galimg{
+            width: 100%;
+        }
+        
+    
+        .content-menu-tabs{
+            
+            grid-column: 1/4;
+            max-width: 940px;
+            margin:auto; 
+            display: flex;                                                    
+            text-transform: uppercase;
+            font-size: 10px;
+            height: 40px;
+                    
+        }
+        #post{
+            
+            margin-right: 40px;
+            color: #8e8e8e;
+            
+            display: flex;
+            align-items: center;
+        }
+        #tag{
+            
+            
+            color: #8e8e8e;
+            display: flex;
+            align-items: center;
+        }
+        #tag:hover,#post:hover{
+            border-top: 1px solid #0a0a0a;
+            color:black;
+            cursor: pointer;
+        }
+        a:hover,button:hover{
+            cursor: pointer;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+    <nav class="navbar">
+
+        <section id="logo">
+              <a href="#">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1200px-Instagram_logo.svg.png" alt="instagram-logo" />
+              </a>
+        </section>
+
+        <section id="search-bar">
+              <i class="fa fa-search"></i>
+              
+              <input id="search"  type="text" placeholder="Search"  />
+        </section>
+
+        <section  id="icon-menu">
+                <a  href="#">
+                    <img class="icon" src="https://img.icons8.com/fluency-systems-regular/96/000000/home.png"/>
+                </a>
+                <a href="#">
+                    <img class="icon" src="https://img.icons8.com/ios/50/000000/facebook-messenger--v2.png"/>                
+                </a>                
+                <a href="#">
+                    <img class="icon" src="https://img.icons8.com/ios/50/000000/plus-2-math.png"/>
+                </a>
+                <a href="#">
+                    <img class="icon" src="https://img.icons8.com/ios/50/000000/compass--v1.png"/>
+                </a>
+                <a href="#">
+                    <img class="icon" src="https://cdn.iconscout.com/icon/premium/png-64-thumb/shape-3660726-3051367.png"/>
+                </a>
+                <a href="#">
+                    <img class="icon" src="https://img.icons8.com/ios/50/000000/circled.png"/>
+                </a>
+        </section>
+    </nav>
+    </header>  
+    <main>
+        <section class="container profile-header-section">                     
+                    <div class="proimg">
+                        <img class="propic" src="https://cataas.com/cat?width=64&height=64"/>
+                    </div>
+                    <div class="proinfo">
+                        <div  style="display: flex; ">
+                            <h1>pusheen</h1> <button id="b1">Follow</button> <button style="font-size:10px;font-weight: 50;" id="b2">v</button> <button><img style="width:15px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOAAAADgCAMAAAAt85rTAAAAdVBMVEX///8AAAD09PR+fn64uLjFxcXw8PCJiYnQ0ND5+fmMjIxXV1cuLi5iYmKrq6ttbW3p6ekKCgqbm5s1NTVOTk4XFxfNzc2hoaHd3d08PDxFRUVmZmawsLDm5uYwMDDW1tZ5eXkkJCQfHx+VlZW+vr4aGho6Ojrmv75gAAAEkUlEQVR4nO3b6XaiQBAFYBYVcEGiiEviQozz/o84EEdx6equKswZzbnfb/seGnqF1vMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOB59eJOOumH0STtFOtHZRZVZhT2q8y494jATBkYbKPB9OCfzIZ5WLS9oKAb5dNZkzkd9OOgTWCvCPNhE3iYDqItLzCeT/175b7b4mq6+6Ehc7nf6gNLQ+B0HjtLriNDwaPxQnk1izEV+bbLHhvoR47+NCdLfpfWNKqgb4t828sD6WdQB84tRQtT47w07Igv5+vTkbkUtv2OqbVfBZLtdPLmKFqJEtnlhO5I33bPbyXW9nBEPMSAbtiXckmvyQaszAH7rmU5K3Bn6EsJr36iGgYrZuY7s4bMG1YNiHeBwYhZtOqI3Bpm3Pr5/opVw8zV/Rqj20BOXznh3m/u7a6FjDzBQ6gGC339qj7Dqt+7KJNRQ8kNu6lhISrq+x+M+n0IM52zhTTwYrZY89v20Zt7SbQQRvoHxxokZkxiVzbNWGFdGhg5Gyl7UG7s7Im8CeLSuZFuxUV937Wk6SgyrY1U2kBrp8WzbDQ4Wjn2T65Fn8nd0H6hx59yGu/Hsl1FUd9PrfXT3G/rI0xbBMpG35OZrX7sJcw1S89W5R0DA11Za4/R9OrKgdwA61qZ79cdaaIsa5uZd8pMcl8hW4hcB0rWP5eWliXpRplJLUmzpTKwGmYW0kn+jH6hUkjn5DNibFY2+WpjsPZibVnLOKob8mpf5kD7mxSbokVZeszT9hiyY+sG+tpcPR5Uj5+qX6K/npE5sVQH7jxt961QFey53jPRcnOi/hqXXqkvTL1E7OkjV8ZM7VRdKb2Z+0cUan/TooJTY+ZaHzjz1CN6s1h/YAU3xgqqZ4lq59qmgtRE+FwV/OVN9OCV+sI/MMgsjUuZFoPMxtNtbL4R9fMC9erv8dNE3mKi31AVTLTr9/Me/JZ28V4vjfRLNWLV4WleYp1E5kD9Hft4jcW2PjD21prXQ99eYbtUj8q/fcOr7oQv88oiUZa1vb1XNqlP8piD9OPJyXeLkL9kr5G7wZpyR0iPy16pChy3uDv2D0y6F7+WRtEqUPPqPnecKPmjyLS+upd/ezk9wBf5+KIJPHdp+cqDWDM2nurzmeTj/tFPfACd/eAH0N/5CftqpSVrpMSa/4ZstieW2Zdkg+HNITjJUmHEPJP3TMdIvIB/Nf/xIFDJDryfchJuixrxj3Il3JHv/uQVUUPuM9wZAhNePxyLDkfzJouQfRivxwvsmwNTxhu2iaB6tT3jckSHUBnfaz/JQX7rWmANiR23Rdf1oWJVyAK/nAdibSfBU+ts2lcdabY+xIO0STjPSNuPf3hr43H2WhmqD6VH1FPc9HWH0kPqIocT9588go5p7PuTqi7lnyw1zRiDVP3PiSw19aZxhxeYLO7+GNLuTxx1ZhHmm6b9138M2QqPf18L4t3lH0Nm0/ePniTwJf7as74IbPsEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgJ/0F/rZH3qRcLNkAAAAASUVORK5CYII="/></button>   
+                        </div><br/>                                              
+                    </div>
+                    <div class="count">
+                        <text><strong>1,188</strong> posts</text>
+                        <text><strong>1,323</strong> followers</text>
+                        <text><strong>2,332</strong> following</text>
+                    </div>
+                    <div>
+                        <h2 style="font-size:16px;font-weight: 500;">Pusheen</h2>
+                    </div>
+                    <div class="infocont">
+                        <p style="color:#8e8e8e">Art</p>
+                        <p>The official account of Pusheen the cat.<br/>
+                        Shop new and exclusive Pusheen merchandise online at
+                        <a href="">@ThePusheenShop!</a><br/>
+                        <a href="">pusheen.com/instagram</a></p>
+                    </div>                                          
+        </section>
+        <section class="container stories-section">
+            <div >
+                <figure><img class="highimgs" src="https://picsum.photos/300/300"/></figure>
+                <figcaption>reels</figcaption>
+            </div>
+            <div >
+                <figure><img class="highimgs" src="https://picsum.photos/300/300"/></figure>
+                <figcaption>highlights</figcaption>
+            </div>
+            <div >
+                <figure><img class="highimgs" src="https://picsum.photos/300/300"/></figure>
+                <figcaption>Wallpaper</figcaption>
+            </div>
+            <div >
+                <figure><img class="highimgs" src="https://picsum.photos/300/300"/></figure>
+                <figcaption>Favorite</figcaption>
+            </div>
+            <div >
+                <figure><img class="highimgs" src="https://picsum.photos/300/300"/></figure>
+                <figcaption>Greetings</figcaption>
+            </div>
+            
+        </section>
+        
+        <section class="container flex-col">
+            <div class="content-menu-tabs">
+                <h3 id="post">posts</h3><h3 id="tag">tagged</h3>
+            </div>
+            <div ><img class="galimg" src="https://picsum.photos/300/300" alt="photo"/></div>
+            <div ><img class="galimg" src="https://picsum.photos/300/300" alt="photo"/></div>
+            <div ><img class="galimg" src="https://picsum.photos/300/300" alt="photo"/></div>
+            <div ><img class="galimg" src="https://picsum.photos/300/300" alt="photo"/></div>
+            <div ><img class="galimg" src="https://picsum.photos/300/300" alt="photo"/></div>
+            <div ><img class="galimg" src="https://picsum.photos/300/300" alt="photo"/></div>
+            <div ><img class="galimg" src="https://picsum.photos/300/300" alt="photo"/></div>
+            <div ><img class="galimg" src="https://picsum.photos/300/300" alt="photo"/></div>
+            <div ><img class="galimg" src="https://picsum.photos/300/300" alt="photo"/></div>
+            <div ><img class="galimg" src="https://picsum.photos/300/300" alt="photo"/></div>
+            <div ><img class="galimg" src="https://picsum.photos/300/300" alt="photo"/></div>
+            <div ><img class="galimg" src="https://picsum.photos/300/300" alt="photo"/></div>
+        </section>
+
+    </main> 
+</body>
+</html>

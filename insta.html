@@ -1,0 +1,240 @@
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        body{
+  font-family:"Open Sans", sans-serif;
+}
+.navigation {
+  border-bottom: 1px solid #e6e6e6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  padding: 0 100px;
+  height:75px;
+}
+
+.navigation__column {
+  position: relative;
+}
+
+.navigation__column .fa-search {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 12px;
+}
+
+.navigation__column input {
+  padding: 5px 0;
+  padding-left: 60px;
+  border: 0;
+  border: 1px solid #e6e6e6;
+  font-size: 16px;
+  outline: none;
+  border-radius:3px;
+  background-color:#fafafa;
+}
+
+.navigation__column img {
+  height: 50px;
+}
+
+.feed {
+  background-color:#fafafa;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+}
+
+.photo {
+  background-color: white;
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  margin-bottom: 30px;
+}
+
+.photo__header {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.photo__avatar {
+  width: 32px;
+  margin-right: 10px;
+  border-radius:50%;
+}
+
+.photo__author {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.photo__actions {
+  margin-bottom: 12px;
+  font-size: 17px;
+}
+
+.photo__action {
+  cursor: pointer;
+}
+
+.photo__action:first-child {
+  margin-right: 15px;
+}
+
+.ellipsis-icon {
+  margin-left: 350px;
+}
+
+.share-icon {
+  margin-left: 15px;
+}
+
+.photo__likes {
+  font-weight: 600;
+  margin-bottom: 3px;
+  display: block;
+}
+
+.photo__add-comment-container {
+  margin-top: 15px;
+  border-top: 1px solid #e6e6e6;
+  padding-top: 10px;
+}
+
+textarea {
+  width: 90%;
+  font-size: 14px;
+  resize: none;
+  height: 20px;
+  outline: none;
+  border:none;
+}
+
+.photo__time-ago {
+  font-size: 15px;
+  margin-top: 10px;
+  display: block;
+  color:#999;
+}
+
+.photo__comment {
+  margin-bottom: 10px;
+}
+
+ul {
+  margin-left: -40px;
+  list-style:none;
+}
+
+.photo__comment-author {
+  font-weight: 600;
+}
+
+.post1 {
+  width: 100%;
+}
+.photo__info{
+  padding: 15px 20px 15px 20px;
+}
+.bookmark-icon{
+  float:right;
+}
+    </style>
+</head>
+<body>
+    <body>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <nav class="navigation">
+          <div class="navigation__column">
+            <a href="#">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1200px-Instagram_logo.svg.png" alt="instagram-logo" />
+            </a>
+          </div>
+          <div class="navigation__column">
+            <i class="fa fa-search"></i>
+            <input type="text" placeholder="Search" />
+          </div>
+        </nav>
+      
+        <main class="feed">
+          <div class="photo">
+            <header class="photo__header">
+              <img class="photo__avatar" src="https://i.imgur.com/Yptxnvd.png" alt="user-profile-pic" />
+              <div class="photo__user-info">
+                <span class="photo__author">kittenworld</span>
+              </div>
+              <span class="ellipsis-icon"><i class="fa fa-ellipsis-v"></i></span>
+            </header>
+            <img class="post1" src="https://i.imgur.com/O0ntdkZ.jpg" alt="first post image" />
+            <div class="photo__info">
+              <div class="photo__actions">
+                <span class="photo__action">
+                  <i class="fa fa-heart-o fa-lg"></i>
+                </span>
+                <span class="photo__action">
+                  <i class="fa fa-comment-o fa-lg"></i>
+                </span>
+                <span class="share-icon photo__action">
+                  <i class="fa fa-paper-plane-o fa-lg"></i>
+                </span>
+                <span class="bookmark-icon photo__action">
+                  <i class="fa fa-bookmark-o fa-lg"></i>
+                </span>
+              </div>
+              <span class="photo__likes">45 likes</span>
+              <ul class="photo__comments">
+                <li class="photo__comment"><span class="photo__comment-author">littlecandy</span> love this!</li>
+                <li class="photo__comment"><span class="photo__comment-author">littlecandy</span> Awww!</li>
+              </ul>
+              <span class="photo__time-ago">19 minutes ago</span>
+              <div class="photo__add-comment-container">
+                <textarea name="comment" placeholder="Add a comment..."></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="photo">
+            <header class="photo__header">
+              <img class="photo__avatar" src="https://i.imgur.com/Yptxnvd.png" alt="user-profile-pic" />
+              <div class="photo__user-info">
+                <span class="photo__author">dogsarmy</span>
+              </div>
+              <span class="ellipsis-icon"><i class="fa fa-ellipsis-v"></i></span>
+            </header>
+            <img class="post2" src="https://i.imgur.com/ce85kI9.jpg" alt="second post image" />
+            <div class="photo__info">
+              <div class="photo__actions">
+                <span class="photo__action">
+                  <i class="fa fa-heart-o fa-lg"></i>
+                </span>
+                <span class="photo__action">
+                  <i class="fa fa-comment-o fa-lg"></i>
+                </span>
+                <span class="share-icon photo__action">
+                  <i class="fa fa-paper-plane-o fa-lg"></i>
+                </span>
+                <span class="bookmark-icon photo__action">
+                  <i class="fa fa-bookmark-o fa-lg"></i>
+                </span>
+              </div>
+              <span class="photo__likes">160 likes</span>
+              <ul class="photo__comments">
+                <li class="photo__comment"><span class="photo__comment-author">harryjane</span> love this!</li>
+                <li class="photo__comment"><span class="photo__comment-author">sheela</span> such a cute!</li>
+              </ul>
+              <span class="photo__time-ago">2 hours ago</span>
+              <div class="photo__add-comment-container">
+                <textarea name="comment" placeholder="Add a comment..."></textarea>
+              </div>
+            </div>
+          </div>
+        </main>
+    </body>      
+    
+</body>
+</html>

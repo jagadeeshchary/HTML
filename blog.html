@@ -1,0 +1,187 @@
+<html lang="en">
+<head>
+    <title>Blog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap" rel="stylesheet">    <!-- <link href="https://fonts.google.com/specimen/Bonheur+Royale"/> -->
+    <style>
+        
+        body {
+          max-width: 700px;
+          margin: 60px auto;
+          font-size: 19px;
+          line-height: 1.6em;
+          font-family: "Open Sans", sans-serif;
+          color: #3a4145;
+        }
+      
+        h1,
+        h4 {
+          color: #222;
+        }
+        .article-title {
+          font-size: 60px;
+          line-height: 1.2em;
+          font-family:"Bonheur Royale";
+        }
+      
+        li {
+          line-height: 1.6em;
+        }
+      
+        a {
+          color: #57a3e8;
+          text-decoration: none;
+        }
+      
+        a:hover {
+          color:white;
+          padding: 2px;
+          background-color:black;
+          border-radius: 10%;
+        }
+      
+        .article-image1 {
+          margin-left: 20%;
+        }
+      
+        img {
+          max-width: 100%;
+          margin-top: 3%;
+          margin-bottom: 3%;
+        }
+      
+        table {
+          border-spacing: 10px;
+        }
+      
+        code {
+          padding: 1px 3px;
+          font-family: Inconsolata, monospace, sans-serif;
+          font-size: 0.85em;
+          border: 1px solid #e3edf3;
+          background: #f7fafb;
+          border-radius: 2px;
+        }
+      
+        footer p {
+          font-style: italic;
+          font-size: 18px;
+          color: #bbc7cc;
+          margin-top: -3%;
+        }
+      </style>
+</head>
+<body>
+    <article>
+        <h1 class="article-title">The Cloud Is Just Someone Else's Computer</h1>
+        <p>When we started <a href="#">Discoursein</a> 2013, our server requirements were high:</p>
+        <ul>
+            <li>1GB RAM</li>
+            <li>modern, fast dual core CPU</li>
+            <li>speedy solid state drive with 20+ GB</li>
+        </ul>
+        <p>The cloud got cheaper, and faster. Not really a surprise, since the
+            <a href="#">price of hardware trends to zero over time.</a>
+            But it's still the cloud, and that means it isn't exactly cheap. It is, after all, someone else's computer that
+            you pay for the privilege of renting.</p>
+            <img class="article-image1" src="https://i.imgur.com/EnqQkr9.png" alt="cloud image1"/>
+
+            <p>But wait … what if you could put your own computer "in the cloud"?</p>
+            <p>Wouldn't that be the best of both worlds? Reliable connectivity, plus a nice low monthly price for extremely fast
+                hardware? If this sounds crazy, it shouldn't – Mac users have been doing this <a href="#">for years now</a>.</p>
+                <img src="https://imgur.com/3Ta0lNJ" alt="image2"/>
+            <p>I originally wrote about <a href="#">the scooter computers</a> we added to our Discourse infrastructure in 2016,
+                plus my own colocation experiment that ran concurrently.</p>
+            <p>the last three years of both experiments, I've concluded that these little boxes are plenty reliable
+                , with one role specific caveat that I'll explain in the comments. I remain an unabashed fan of mini-PC
+                colocation. I like it so much I put together a new 2019 iteration:</p>
+
+                <table>
+                    <thead style="text-align:left">
+                        <tr>
+                            <th>2017 - $670</th>
+                            <th>2019 - $820</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="#">i7 - 7500u</a></td>
+                            <td><a href="#">i7 - 8750h</a></td>
+                        </tr>
+                        <tr>
+                            <td>2.7-3.5 Ghz, 2c / 4t</td>
+                            <td>2.2-4.1 Ghz, 6c / 12t</td>
+                        </tr>
+                        <tr>
+                            <td>16GB DDR3 RAM</td>
+                            <td>32GB DDR4 RAM</td>
+                        </tr>
+                        <tr>
+                            <td>500GB SATA SSD</td>
+                            <td>500GB NVMe SSD</td>
+                        </tr>
+
+                    </tbody>
+                    
+                    <a href="#"></a>
+               
+                </table>
+                <div><img src="https://i.imgur.com/VMjl04M.jpeg" alt="image3"/></div>
+                <div><img src="https://i.imgur.com/39ufeVa.jpeg" alt="image4"/></div>
+                <p>I vetted each box via my <a href="#">recommended burn in and stability testing</a> and they all passed with flying
+                    colors, though I did have to RMA one set of bodgy RAM sticks in the process. The benchmarks tell the story, as
+                    compared to the average Digital Ocean droplet:</p>
+                    <strong>Pre-core performance</strong><br/>
+                    <code>sysbench cpu --cpu-max-prime=20000 run</code>
+                    <div>
+                        <table>
+                            <tr>
+                                <td>DO Droplet</td>
+                                <td>2,988</td>
+                            </tr>
+                            <tr>
+                                <td>2017 Mini-PC</td>
+                                <td>4,800</td>
+                            </tr>
+                            <tr>
+                                <td>2019 Mini-PC</td>
+                                <td>5,671</td>
+                            </tr>
+                        </table>
+                    </div>
+
+    <strong>Multi-core performance</strong> <br/>
+    <code>sysbench cpu --cpu-max-prime=40000 --num-threads=8 run</code>
+    <div>
+        <table>
+            <tr>
+                <td>DO Droplet</td>
+                <td>2,200</td>
+            </tr>
+            <tr>
+                <td>2017 Mini-PC</td>
+                <td>5,588</td>
+            </tr>
+            <tr>
+                <td>2019 Mini-PC</td>
+                <td>14,604</td>
+            </tr>
+        </table>
+    </div>
+    <div><img src="https://i.imgur.com/67hQDJA.jpg" alt="image5"/></div>
+    <p>If you'd also like to embark upon this project, you can get<a href="#">
+        the same Partaker B18 box I did for $490 from Amazon, or $460 direct from China via AliExpress.</a>
+        Add memory and drive to taste, build it up, then check out <a href="#">endoffice.com</a>
+        who I can enthusiastically recommend for colocation, or the colocation provider of your choice.</p>
+  
+    
+    </body><hr/>
+    <footer>
+    <h4>Written by Jeff Atwood</h4>
+  
+    Indoor enthusiast. Co-founder of Stack Overflow and Discourse. Disclaimer: I have no idea what I'm talking
+    about. Find me here:<a href="http://twitter.com/codinghorror"><em>http://twitter.com/codinghorror</em></a>
+    </footer>
+    </article>
+    
+
+</html>

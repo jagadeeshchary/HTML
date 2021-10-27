@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form</title>
+    <style>
+        form {
+          border: 1px solid #ccc;
+          width: 400px;
+          padding: 20px;
+          border-radius: 4px;
+          margin: 0 auto;
+        }
+      
+        h1 {
+          text-align: center;
+        }
+      
+        label {
+          display: block;
+          font-size: 80%;
+          color: #444;
+          margin-bottom: 4px;
+        }
+      
+        input {
+          width: 100%;
+          padding: 4px;
+          font-size: 125%;
+        }
+      
+        div + div {
+          margin-top: 20px;
+        }
+      
+        select {
+          padding: 4px;
+          font-size: 100%;
+          width: 100%;
+        }
+      
+        button {
+          background-color: blueviolet;
+          color: #fff;
+          padding: 16px 16px;
+          font-size: 125%;
+          border: none;
+          border-radius: 4px;
+          width: 100%;
+        }
+      
+        .is-robot {
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          padding: 30px 10px;
+          background: #eee;
+        }
+      
+        .is-robot input {
+          height: 20px;
+          width: 20px;
+        }
+      
+        .is-robot label {
+          display: inline;
+          font-size: 100%;
+        }
+      
+        .gender {
+          display: flex;
+          margin-right: 60%;
+        }
+      
+        textarea {
+          width: 100%;
+          height: 15%;
+        }
+      </style>
+</head>
+<body>
+    <form>
+    <h1>Registration Form</h1>
+  <div>
+    <label for="firstname">First Name:</label>
+    <input name="firstname" type="text" required />
+  </div>
+  <div>
+    <label for="lastname">Last Name:</label>
+    <input name="lastname" type="text" required />
+  </div>
+  <div>
+    <label for="email">Email address:</label>
+    <input name="useremail" type="email" required />
+  </div>
+  <div>
+    <label for="gender">Gender:</label>
+    <div class="gender">
+        <label for="male"><input value="male" type="radio" name="gender" required>Male</label>
+        <label for="female"><input value="female" type="radio" name="gender" required>Female</label>
+        <label for="other"><input value="other" type="radio" name="gender" required>Other</label>
+    </div>
+  </div>
+  <div>
+    <label for="address">Address:<input type="textarea" name="Address" required/></label>
+  </div>
+  <div>
+    <label for="company">Company Name:</label>
+    <input name="company" type="text" required />
+  </div>
+  <div>
+    <label for="role">Role:</label>
+    <select name="role" id="role">
+      <option value="developer">Developer</option>
+      <option value="sales">Sales</option>
+      <option value="admin">Admin</option>
+    </select>
+  </div>
+  <div>
+    <label for="country">Country:</label>
+    <select name="country" id="country">
+      <option value="india">India</option>
+      <option value="japan">Japan</option>
+      <option value="russia">Russia</option>
+    </select>
+  </div>
+  <label for="checkbox">IsRobot<input value="checkbox" type="checkbox" name="isRobot" required></label>
+    <div><button type="submit">Create a free account</button></div>
+  </form>
+</body>
+</html>
+  
+  
